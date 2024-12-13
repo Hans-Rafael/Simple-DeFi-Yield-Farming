@@ -4,15 +4,19 @@ async function main() {
   console.log("Deploying contracts with the account:", deployer.address);
 
   //deploy DAppToken
-  const DAppToken = await ethers.getContractFactory("DAppToken"); //obtenemos el contrato de DAppToken
-  const dAppToken = await DAppToken.deploy(deployer.address); //desplegamos el contrato de DAppToken
-  await dAppToken.deployed(); //esperamos a que se despliegue el contrato
+  const DAppToken = await ethers.getContractFactory("DAppToken");
+  const dAppToken = await DAppToken.deploy(deployer.address); // Pasar parámetros al constructor
+
+  await dAppToken.deployed(); // Esperar el despliegue
+
   console.log("DAppToken deployed to:", dAppToken.address);
 
-  //deploy LPToken
+  // Desplegar el contrato LPToken
   const LPToken = await ethers.getContractFactory("LPToken");
-  const lpToken = await LPToken.deploy(deployer.address);
-  await lpToken.deployed();
+  const lpToken = await LPToken.deploy(deployer.address); // Pasar parámetros al constructor
+
+  await lpToken.deployed(); // Esperar el despliegue
+
   console.log("LPToken deployed to:", lpToken.address);
 }
 main().catch((error) => { 
