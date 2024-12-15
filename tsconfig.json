@@ -8,7 +8,13 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "outDir": "dist",
-    "typeRoots": ["./node_modules/@types"]
+    "typeRoots": [
+      "./node_modules/@types"
+    ]
   },
-  "include": ["./scripts", "./test", "./hardhat.config.ts"]
+  "include": [
+    "./scripts",
+    "./test",
+    "./hardhat.config.ts"
+  ]
 }

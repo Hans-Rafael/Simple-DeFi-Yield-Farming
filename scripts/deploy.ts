@@ -24,10 +24,9 @@ async function main() {
   // Desplegar el contrato de TokenFarm
   const TokenFarm = await ethers.getContractFactory("TokenFarm");
   const tokenFarm = await TokenFarm.deploy(dAppTokenAddress, lpTokenAddress);
-
+  await tokenFarm.waitForDeployment();
   console.log("TokenFarm deployed to:", tokenFarm.target);
 };
-
 
 main().catch((error) => {
   console.error(error);
