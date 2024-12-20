@@ -37,6 +37,30 @@ El contrato principal que gestiona el staking, distribución de recompensas, y m
 - Hardhat para el desarrollo y pruebas de contratos inteligentes.
 - Una red de pruebas local (usando Hardhat).
 
+## Estructura del proyecto
+
+- **`contracts/`**: Contiene los contratos Solidity.
+- **`scripts/`**: Contiene los scripts para desplegar los contratos.
+- **`hardhat.config.ts`**: Configuración de redes y compilación.
+
+# Estructura del Proyecto: TokenFarm
+
+├── contracts
+│   ├── DAppToken.sol       # Token ERC20 usado para recompensas.
+│   ├── LPToken.sol         # Token ERC20 usado para staking.
+│   ├── TokenFarm.sol       # Contrato principal para staking y distribución de recompensas.
+│
+├── scripts
+│   ├── deploy.ts           # Script para desplegar los contratos en la red.
+│
+├── test
+│   ├── TokenFarm.test.ts   # Pruebas unitarias para el contrato TokenFarm.
+│
+├── hardhat.config.ts       # Configuración de Hardhat para redes, plugins y compilación.
+├── package.json            # Archivo de configuración de dependencias del proyecto.
+├── README.md               # Documentación del proyecto.
+
+
 ## Instalación
 
 Clona el repositorio y ejecuta el siguiente comando para instalar las dependencias necesarias:
