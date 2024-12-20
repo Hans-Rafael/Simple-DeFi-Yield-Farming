@@ -45,6 +45,7 @@ El contrato principal que gestiona el staking, distribución de recompensas, y m
 
 # Estructura del Proyecto: TokenFarm
 
+```plaintext
 ├── contracts
 │   ├── DAppToken.sol       # Token ERC20 usado para recompensas.
 │   ├── LPToken.sol         # Token ERC20 usado para staking.
@@ -59,6 +60,7 @@ El contrato principal que gestiona el staking, distribución de recompensas, y m
 ├── hardhat.config.ts       # Configuración de Hardhat para redes, plugins y compilación.
 ├── package.json            # Archivo de configuración de dependencias del proyecto.
 ├── README.md               # Documentación del proyecto.
+
 
 
 ## Instalación
